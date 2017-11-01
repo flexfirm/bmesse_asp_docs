@@ -14,10 +14,10 @@
 
 <h2 id="Bメッセとは">Bメッセとは</h2>
 
-![Bメッセ画像](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/bmesse_image.JPG)
-
 Bメッセはメッセージング機能を開発するための基盤です。  
 ASPサービスとして提供するWebコンソールにアクセスしても利用でき、また既存のWebアプリケーション内に組み込んでも利用できます。  
+![Bメッセ画像](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/bmesse_image.JPG)
+
 主に以下のような機能を開発するために役立ちます。  
 ・リアルタイムチャット機能の開発  
 ・チャットボットの開発  
