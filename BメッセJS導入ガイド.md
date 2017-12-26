@@ -869,13 +869,6 @@ bmesse.attachToPlusButton(functionsAssociativeArray);
 bmsClient.showCustomerFrameWithGroupKey(selector, groupKey, title);
 ```
 
-<h2 id="その他設定">その他設定</h2>
-
-### Shift-JIS対応
-WebがShift_JISの場合、下記のファイルをShift_JISに変換して保存し利用してください。  
-- c21-bms.js
-- bmesse-config.js
-
 <h2 id="用語">用語</h2>
 
 #### Webアプリケーション
