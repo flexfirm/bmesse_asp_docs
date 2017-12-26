@@ -158,7 +158,7 @@ bmesse.offLine();
 ※状態を取得できるのは、相手がWebチャットを利用しているときのみです。  
 
 ```javascript
-bmsClient.showFrameWithCustomerId = function(selector, groupKey, integrationUserId, title)
+bmsClient.showFrameWithCustomerId(selector, groupKey, integrationUserId, title);
 ```
 - __`selector`__:　チャット窓をはめ込む箇所の、htmlタグid属性を指定します。  
 　例えば　、チャット窓をはめ込みたい場所が`<div id="messages_container"></div>`だった場合、  
@@ -171,18 +171,6 @@ bmsClient.showPopupWithCustomerId(integrationUserId, title);
 ```
 __`integrationUserId`__： 統合したアプリ側のカスタマーユーザーIDを渡します。  
 __`title`__： チャット窓のヘッダー名として表示されます。  
-##### チャットのグループを指定して表示する
-チャットグループを指定して表示する場合は以下メソッドを使用します。グループに対応するスレッドIDを指定します。
-
-```javascript
-bmsClient.showPopupWithThreadId(threadId, title);
-```
-__`threadId`__： スレッドIDを渡します。  
-__`title`__： チャット窓のヘッダー名として表示されます。  
-
-- __`groupKey`__： 店舗担当者が所属する加盟店コード。
-- __`integrationUserId`__： メッセージの送信先となる顧客コード  
-- __`title`__： チャット窓のヘッダー表示するタイトル  
 
 ## Bメッセに機能を割り当てる
 いくつかのパーツに機能を割り当てることができます。  
@@ -779,7 +767,7 @@ bmsClient.initIntegrationUser(integrationUserId,
 - initIntegrationUser()
     - __`integrationUserId`__： システムにログインしているカスタマーの顧客コード  
     - __`authToken`__： 導入したWebシステムの認証処理において発行されたBメッセ用の認証トークン。  
-（※取得方法は「BメッセRESTAPIリファレンス.md」を参照してください。）  
+
     - __`completeCallback`__： 成功またはエラーによる処理の完了時のコールバック。有効期限切れ等、無効な認証トークンを指定した場合は error オブジェクトが渡される。  
     - __`stateChangedCallback`__： Bメッセの認証状態が変更になった際に呼び出されるコールバック。現在は未使用。  
 
@@ -815,10 +803,8 @@ bmesse.offLine();
 
 ### [+]ボタン
 
-| 未使用時 | [+]ボタン使用時 |
-|:------:|:------:|
-| ![未使用](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/un_attach_plus_button.JPG) |![使用](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button.JPG)
-  |
+オペレータと同様に、テキストボックス左側に[+]ボタンを設置することができます。  
+![LINE画像プレビュー](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_function_to_plusbuttun_for_customer.png)  
 
 `attachToPlusButton(yourFunction)`関数を使うことで、
 メッセージ入力テキストの左側に[+]ボタンを設置できます。  
@@ -835,12 +821,7 @@ bmesse.attachToPlusButton(
 bmsClient.showCustomerFrameWithGroupKey(selector, groupKey, title);
 ```
 
-引数に連想配列を渡してあげることで、最大４つまで機能をメニューに登録することができます。  
-
-| メニュー非表示時 | メニュー表示時 |
-|:------:|:------:|
-| ![メニュー非表示時](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button_close.JPG) |![メニュー表示時](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button_open.JPG)
-  |
+オペレータ同様に、引数に連想配列を渡してあげることで、最大４つまで機能をメニューに登録することができます。  
 
 連想配列は以下の項目を定義する必要があります。  
 
