@@ -779,7 +779,7 @@ bmsClient.initIntegrationUser(integrationUserId,
 - initIntegrationUser()
     - __`integrationUserId`__： システムにログインしているカスタマーの顧客コード  
     - __`authToken`__： 導入したWebシステムの認証処理において発行されたBメッセ用の認証トークン。  
-（※取得方法は「BメッセRESTAPIリファレンス.md」を参照してください。）  
+
     - __`completeCallback`__： 成功またはエラーによる処理の完了時のコールバック。有効期限切れ等、無効な認証トークンを指定した場合は error オブジェクトが渡される。  
     - __`stateChangedCallback`__： Bメッセの認証状態が変更になった際に呼び出されるコールバック。現在は未使用。  
 
@@ -815,10 +815,8 @@ bmesse.offLine();
 
 ### [+]ボタン
 
-| 未使用時 | [+]ボタン使用時 |
-|:------:|:------:|
-| ![未使用](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/un_attach_plus_button.JPG) |![使用](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button.JPG)
-  |
+オペレータと同様に、テキストボックス左側に[+]ボタンを設置することができます。  
+![LINE画像プレビュー](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_function_to_plusbuttun_for_customer.png)  
 
 `attachToPlusButton(yourFunction)`関数を使うことで、
 メッセージ入力テキストの左側に[+]ボタンを設置できます。  
@@ -835,12 +833,7 @@ bmesse.attachToPlusButton(
 bmsClient.showCustomerFrameWithGroupKey(selector, groupKey, title);
 ```
 
-引数に連想配列を渡してあげることで、最大４つまで機能をメニューに登録することができます。  
-
-| メニュー非表示時 | メニュー表示時 |
-|:------:|:------:|
-| ![メニュー非表示時](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button_close.JPG) |![メニュー表示時](https://raw.githubusercontent.com/flexfirm/bmesse-docs/img_branch/img/attach_plus_button_open.JPG)
-  |
+オペレータ同様に、引数に連想配列を渡してあげることで、最大４つまで機能をメニューに登録することができます。  
 
 連想配列は以下の項目を定義する必要があります。  
 
